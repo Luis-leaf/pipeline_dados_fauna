@@ -1,0 +1,38 @@
+[project]
+name = "api-aa-fauna"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.18.1",
+    "fastapi>=0.128.0",
+    "pydantic-settings>=2.12.0",
+    "python-dotenv>=1.2.1",
+    "selenium>=4.39.0",
+    "sqlalchemy>=2.0.46",
+    "uvicorn[standard]>=0.40.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+exclude = [
+    "alembic",           
+    "*/alembic",         
+    "api/alembic",       
+    "*.pyc",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "W"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["api", "scraper", "models", "schemas", "infra_db"]
