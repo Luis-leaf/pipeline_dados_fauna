@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-load_dotenv("/home/luis/Documentos/api_aa_fauna/api/.env")
+load_dotenv("/home/luis/Documentos/pipeline_fauna/api/.env")
 
 DATABASE_URL = os.getenv("DB_URL")
 

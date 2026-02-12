@@ -1,0 +1,2 @@
+DB_URL = "url_do_banco_dados"
+API_KEY = "sua API_KEY"
